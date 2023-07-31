@@ -1,14 +1,30 @@
 import React from "react";
-import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomeLayout from "./HomeLayout";
+import Home from "../pages/Home";
+import About from "../pages/About";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomeLayout />,
+      errorElement: <h2>There was an error...</h2>,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+      ],
+    },
+  ]);
   return (
     <>
-      <h1>Count App</h1>
-      <h3>{count}</h3>
-      <button onClick={() => setCount(count + 1)}>increase</button>
-      <button onClick={() => setCount(0)}>Reset</button>
+      <RouterProvider router={router} />
     </>
   );
 }
