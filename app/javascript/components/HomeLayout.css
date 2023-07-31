@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  min-height: calc(100vh - 56px);
+}
+
+.home__nav {
+  flex: 0.2;
+}
+
+.home__timeline {
+  flex: 0.8;
+}

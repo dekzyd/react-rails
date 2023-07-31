@@ -1,0 +1,5 @@
+.homepage {
+  background-color: azure;
+  min-height: calc(100vh - 56px);
+  padding: 1rem;
+}

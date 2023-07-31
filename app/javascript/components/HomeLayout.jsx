@@ -1,14 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import "./HomeLayout.css";
 
 const HomeLayout = () => {
   return (
-    <>
-      <h3>HomeLayout</h3>
-      <Sidebar />
-      <Outlet />
-    </>
+    <div className="home">
+      <div className="home__nav">
+        <Sidebar />
+      </div>
+      <div className="home__timeline">
+        <Outlet />
+      </div>
+    </div>
   );
 };
 

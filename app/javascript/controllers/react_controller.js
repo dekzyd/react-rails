@@ -6,7 +6,6 @@ import App from "../components/App";
 // Connects to data-controller="react"
 export default class extends Controller {
   connect() {
-    console.log("youtube trial");
     const app = document.getElementById("app");
     createRoot(app).render(<App />);
   }
